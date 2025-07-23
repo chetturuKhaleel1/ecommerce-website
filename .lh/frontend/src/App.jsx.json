@@ -1,0 +1,18 @@
+{
+    "sourceFile": "frontend/src/App.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1750347175389,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1750347175389,
+            "name": "Commit-0",
+            "content": "import React, { useEffect } from 'react'\nimport { Outlet } from 'react-router-dom'\nimport Navigation from './pages/Auth/Navigation'\nimport { ToastContainer } from 'react-toastify'\nimport \"react-toastify/dist/ReactToastify.css\";\n\nconst App = () => {\n  useEffect(() => {\n    // ✅ Dynamically load Razorpay script\n    const loadRazorpayScript = () => {\n      const script = document.createElement(\"script\");\n      script.src = \"https://checkout.razorpay.com/v1/checkout.js\";\n      script.async = true;\n      document.body.appendChild(script);\n    };\n\n    loadRazorpayScript();\n  }, []);\n\n  return (\n    <>\n      <ToastContainer />\n      <Navigation />\n      <main className='py-3'>\n        <Outlet />\n      </main>\n    </>\n  );\n};\n\nexport default App;\n"
+        }
+    ]
+}

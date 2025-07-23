@@ -1,0 +1,18 @@
+{
+    "sourceFile": "frontend/src/pages/Products/ProductCard.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1750658737043,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1750658737043,
+            "name": "Commit-0",
+            "content": "import { Link } from \"react-router-dom\";\r\nimport { AiOutlineShoppingCart } from \"react-icons/ai\";\r\nimport { useDispatch } from \"react-redux\";\r\nimport { addToCart } from \"../../redux/features/cart/cartSlice\";\r\nimport { toast } from \"react-toastify\";\r\nimport HeartIcon from \"./HeartIcon\";\r\n\r\nconst ProductCard = ({ p }) => {\r\n  const dispatch = useDispatch();\r\n\r\n  const addToCartHandler = (product, qty) => {\r\n    dispatch(addToCart({ ...product, qty }));\r\n    toast.success(\"Item added successfully\")\r\n  };\r\n\r\n  return (\r\n    <div className=\"max-w-sm relative bg-[#1A1A1A] rounded-lg shaodw dark:bg-gray-800 dark:border-gray-700\">\r\n      <section className=\"relative\">\r\n        <Link to={`/product/${p._id}`}>\r\n          <span className=\"absolute bottom-3 right-3 bg-pink-100 text-pink-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-pink-900 dark:text-pink-300\">\r\n            {p?.brand}\r\n          </span>\r\n          <img\r\n            className=\"cursor-pointer w-full\"\r\n            src={p.image}\r\n            alt={p.name}\r\n            style={{ height: \"170px\", objectFit: \"cover\" }}\r\n          />\r\n        </Link>\r\n        <HeartIcon product={p} />\r\n      </section>\r\n\r\n      <div className=\"p-5\">\r\n        <div className=\"flex justify-between\">\r\n          <h5 className=\"mb-2 text-xl text-whiet dark:text-white\">{p?.name}</h5>\r\n\r\n          {/* <p className=\"text-black font-semibold text-pink-500\">\r\n            {p?.price?.toLocaleString(\"en-US\", {\r\n              style: \"currency\",\r\n              currency: \"USD\",\r\n            })}\r\n          </p> */}\r\n        </div>\r\n\r\n        <p className=\"mb-3 font-normal text-[#CFCFCF]\">\r\n          {p?.description?.substring(0, 60)} ...\r\n        </p>\r\n\r\n        <section className=\"flex justify-between items-center\">\r\n          <Link\r\n            to={`/product/${p._id}`}\r\n            className=\"inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-pink-700 rounded-lg hover:bg-pink-800 focus:ring-4 focus:outline-none focus:ring-pink-300 dark:bg-pink-600 dark:hover:bg-pink-700 dark:focus:ring-pink-800\"\r\n          >\r\n            Read More\r\n            <svg\r\n              className=\"w-3.5 h-3.5 ml-2\"\r\n              aria-hidden=\"true\"\r\n              xmlns=\"http://www.w3.org/2000/svg\"\r\n              fill=\"none\"\r\n              viewBox=\"0 0 14 10\"\r\n            >\r\n              <path\r\n                stroke=\"currentColor\"\r\n                strokeLinecap=\"round\"\r\n                strokeLinejoin=\"round\"\r\n                strokeWidth={2}\r\n                d=\"M1 5h12m0 0L9 1m4 4L9 9\"\r\n              />\r\n            </svg>\r\n          </Link>\r\n\r\n          <button\r\n            className=\"p-2 rounded-full\"\r\n            onClick={() => addToCartHandler(p, 1)}\r\n          >\r\n            <AiOutlineShoppingCart size={25} />\r\n          </button>\r\n        </section>\r\n      </div>\r\n    </div>\r\n  );\r\n};\r\n\r\nexport default ProductCard;"
+        }
+    ]
+}

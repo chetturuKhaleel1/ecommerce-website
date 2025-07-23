@@ -1,0 +1,22 @@
+{
+    "sourceFile": "frontend/src/index.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1750655039545,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1750655288577,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,7 +14,4 @@\n .slick-next:before {\r\n   color: white;\r\n   font-size: 20px;\r\n }\r\n-body {\r\n-  @apply font-sans bg-white text-text;\r\n-}\r\n"
+                }
+            ],
+            "date": 1750655039545,
+            "name": "Commit-0",
+            "content": "@import \"tailwindcss\";\r\n\r\n/* Make slick arrows visible */\r\n.slick-prev,\r\n.slick-next {\r\n  z-index: 10;\r\n  background-color: rgba(0, 0, 0, 0.4); /* semi-transparent black */\r\n  width: 40px;\r\n  height: 40px;\r\n  border-radius: 9999px;\r\n}\r\n\r\n.slick-prev:before,\r\n.slick-next:before {\r\n  color: white;\r\n  font-size: 20px;\r\n}\r\nbody {\r\n  @apply font-sans bg-white text-text;\r\n}\r\n"
+        }
+    ]
+}

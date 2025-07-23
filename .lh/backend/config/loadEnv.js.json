@@ -1,0 +1,18 @@
+{
+    "sourceFile": "backend/config/loadEnv.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1750498413988,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1750498413988,
+            "name": "Commit-0",
+            "content": "// backend/config/loadEnv.js\r\nimport dotenv from 'dotenv';\r\nimport path from 'path';\r\n\r\ndotenv.config({ path: path.resolve(process.cwd(), '.env') });\r\n\r\nconsole.log(\"🔁 [loadEnv.js] ENV loaded\", {\r\n  id: process.env.RAZORPAY_KEY_ID,\r\n  secret: process.env.RAZORPAY_KEY_SECRET,\r\n});\r\n"
+        }
+    ]
+}

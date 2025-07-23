@@ -1,0 +1,18 @@
+{
+    "sourceFile": "backend/routes/categoryRoutes.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1750334601026,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1750334601026,
+            "name": "Commit-0",
+            "content": "import express from \"express\";\r\nconst router =  express.Router()\r\nimport { createCatergory,updateCategory,removeCategory , listCategory ,readCatergory    } from \"../controllers/catergoryController.js\";\r\n//grabing careted moiddle ware \r\n\r\nimport { authenticate, authorizeAdmin } from \"../middlewares/authMiddleware.js\";\r\n\r\n///goocarete controllers\r\n\r\n//authiacte user\r\nrouter.route('/').post( authenticate, authorizeAdmin,  createCatergory)\r\nrouter.route('/:categoryId').put( authenticate, authorizeAdmin, updateCategory )\r\n\r\n\r\nrouter.route('/:categoryId').delete( authenticate, authorizeAdmin, removeCategory )\r\nexport default router\r\n\r\n//get all catreioges\r\n\r\nrouter.route(\"/categories\").get(listCategory)\r\n\r\n//read specific category\r\n\r\nrouter.route('/:id').get( readCatergory )\r\n\r\n//goto controlers"
+        }
+    ]
+}

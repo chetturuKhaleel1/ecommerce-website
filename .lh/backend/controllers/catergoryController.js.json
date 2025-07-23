@@ -1,0 +1,18 @@
+{
+    "sourceFile": "backend/controllers/catergoryController.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1750334605774,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1750334605774,
+            "name": "Commit-0",
+            "content": "import Category from \"../models/categoryModel.js\";\r\nimport asyncHandler from \"../middlewares/asyncHandler.js\";\r\n\r\nconst createCategory = asyncHandler(async (req, res) => {\r\n  try {\r\n    const { name } = req.body;\r\n\r\n    if (!name) {\r\n      return res.json({ error: \"Name is required\" });\r\n    }\r\n\r\n    const existingCategory = await Category.findOne({ name });\r\n\r\n    if (existingCategory) {\r\n      return res.json({ error: \"Already exists\" });\r\n    }\r\n\r\n    const category = await new Category({ name }).save();\r\n    res.json(category);\r\n  } catch (error) {\r\n    console.log(error);\r\n    return res.status(400).json(error);\r\n  }\r\n});\r\n\r\nconst updateCategory = asyncHandler(async (req, res) => {\r\n  try {\r\n    const { name } = req.body;\r\n    const { categoryId } = req.params;\r\n\r\n    const category = await Category.findOne({ _id: categoryId });\r\n\r\n    if (!category) {\r\n      return res.status(404).json({ error: \"Category not found\" });\r\n    }\r\n\r\n    category.name = name;\r\n\r\n    const updatedCategory = await category.save();\r\n    res.json(updatedCategory);\r\n  } catch (error) {\r\n    console.error(error);\r\n    res.status(500).json({ error: \"Internal server error\" });\r\n  }\r\n});\r\n\r\nconst removeCategory = asyncHandler(async (req, res) => {\r\n  try {\r\n    const removed = await Category.findByIdAndRemove(req.params.categoryId);\r\n    res.json(removed);\r\n  } catch (error) {\r\n    console.error(error);\r\n    res.status(500).json({ error: \"Internal server error\" });\r\n  }\r\n});\r\n\r\nconst listCategory = asyncHandler(async (req, res) => {\r\n  try {\r\n    const all = await Category.find({});\r\n    res.json(all);\r\n  } catch (error) {\r\n    console.log(error);\r\n    return res.status(400).json(error.message);\r\n  }\r\n});\r\n\r\nconst readCategory = asyncHandler(async (req, res) => {\r\n  try {\r\n    const category = await Category.findOne({ _id: req.params.id });\r\n    res.json(category);\r\n  } catch (error) {\r\n    console.log(error);\r\n    return res.status(400).json(error.message);\r\n  }\r\n});\r\n\r\nexport {\r\n  createCategory,\r\n  updateCategory,\r\n  removeCategory,\r\n  listCategory,\r\n  readCategory,\r\n};"
+        }
+    ]
+}

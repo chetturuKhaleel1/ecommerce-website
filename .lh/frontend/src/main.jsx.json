@@ -1,0 +1,26 @@
+{
+    "sourceFile": "frontend/src/main.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1750347068157,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1750347083576,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -96,11 +96,9 @@\n \n // Render the app with Redux store and router\n createRoot(document.getElementById('root')).render(\n    <Provider store={store}>\n-    <PayPalScriptProvider>\n-      <RouterProvider router={router} />\n-    </PayPalScriptProvider>\n+   \n   </Provider>\n );\n \n \n"
+                },
+                {
+                    "date": 1750347096322,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -96,9 +96,9 @@\n \n // Render the app with Redux store and router\n createRoot(document.getElementById('root')).render(\n    <Provider store={store}>\n-   \n+   <RouterProvider router={router} />\n   </Provider>\n );\n \n \n"
+                }
+            ],
+            "date": 1750347068157,
+            "name": "Commit-0",
+            "content": "// main.jsx or index.jsx\nimport { createRoot } from 'react-dom/client';\nimport './index.css';\nimport App from './App.jsx'; // Main layout or wrapper\nimport AdminRoute from './pages/Admin/AdminRoute';\n// React Router imports\nimport { Route, RouterProvider, createRoutesFromElements } from 'react-router';\nimport { createBrowserRouter } from 'react-router-dom';\n\n// Redux store provider\nimport { Provider } from 'react-redux';\nimport store from './redux/store';\n\n\n// Components and pages\nimport PrivateRoute from './components/PrivateRoute'; // Route guard component\nimport Login from './pages/Auth/Login';\nimport Register from './pages/Auth/Register';\nimport Profile from './pages/User/Profile';\nimport UserList from './pages/Admin/UserList.jsx';\nimport CategoryList from './pages/Admin/CategoryList.jsx';\nimport ProductList from \"./pages/Admin/ProductList\";\nimport AllProducts from './pages/Admin/AllProducts.jsx';\nimport ProductUpdate from './pages/Admin/ProductUpdate.jsx'\nimport Home from './pages/Home.jsx';\nimport Favorites from './pages/Products/Favorites.jsx';\nimport ProductDetails from './pages/Products/ProductDetails.jsx';\nimport Cart from './pages/Cart.jsx';\n\nimport Shop from './pages/Shop.jsx';\nimport Shipping from './pages/Orders/Shipping.jsx';\nimport PlaceOrder from './pages/Orders/PlaceOrder.jsx';\n\n\nimport Order from './pages/Orders/Order.jsx';\nimport UserOrder from './pages/User/UserOrder.jsx';\nimport OrderList from './pages/Admin/OrderList.jsx';\nimport AdminDashboard from './pages/Admin/AdminDashboard.jsx';\n\n// Create routes using React Router's createBrowserRouter\nconst router = createBrowserRouter(\n  createRoutesFromElements(\n    <Route path=\"/\" element={<App />}> {/* Root app layout */}\n            {/* 🌐 Public routes */}\n      <Route path=\"/login\" element={<Login />} />\n      <Route path=\"/register\" element={<Register />} />\n<Route index={true}  path=\"/\" element={<Home/>}/>\n<Route path='/favorite' element={<Favorites/>}/>\n<Route path='/product/:id' element={<ProductDetails/>} />\n<Route path='/cart' element={<Cart/>}/>\n<Route path='/shop' element={<Shop/>}/>\n<Route path='/user-orders' element={<UserOrder/>}/>\n\n\n\n\n\n\n\n      {/* 🔐 Protected routes go here */}\n      <Route path=\"\" element={<PrivateRoute />}>\n        {/* ✅ Correct path spelling for /profile */}\n        <Route path=\"/profile\" element={<Profile />} />\n{/* shipping */}\n <Route path=\"/shipping\" element={<Shipping />} />\n      </Route>\n{/* placeholder */}\n<Route path='/placeorder' element={<PlaceOrder/>}/>\n\n{/* specifi order */}\n\n<Route path='/order/:id' element={<Order/>}/>\n     {/* admin routes */}\n\n<Route path='/admin' element={<AdminRoute/>}>\n\n\n<Route path='userlist' element={<UserList/>} />\n\n<Route path='categorylist' element={<CategoryList/>} />\n<Route path='productlist/:pageNumber' element={<ProductList/>}/>\n <Route path=\"productlist\" element={<ProductList />} />\n<Route path='allproductslist' element={<AllProducts/>}/>\n<Route path='orderlist' element={<OrderList/>}/>\n <Route path=\"product/update/:_id\" element={<ProductUpdate />} />\n <Route path='dashboard' element={<AdminDashboard/>}/>\n\n</Route>\n\n\n\n\n    </Route>\n  )\n);\n\n// Render the app with Redux store and router\ncreateRoot(document.getElementById('root')).render(\n   <Provider store={store}>\n    <PayPalScriptProvider>\n      <RouterProvider router={router} />\n    </PayPalScriptProvider>\n  </Provider>\n);\n\n\n\n\n"
+        }
+    ]
+}

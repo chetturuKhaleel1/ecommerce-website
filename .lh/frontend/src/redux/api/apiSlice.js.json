@@ -1,0 +1,26 @@
+{
+    "sourceFile": "frontend/src/redux/api/apiSlice.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1750657864904,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1750657883934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n   baseUrl: BASE_URL,\r\n   prepareHeaders: (headers, { getState }) => {\r\n     const token = getState()?.auth?.userInfo?.token;\r\n     if (token) {\r\n-      headers.set(\"Authorization\", `Bearer  ₹{token}`);\r\n+      headers.set(\"Authorization\", `Bearer ₹{token}`);\r\n     }\r\n     return headers;\r\n   },\r\n   fetchFn: async (url, options = {}) => {\r\n"
+                },
+                {
+                    "date": 1750658004853,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,25 @@\n+import { fetchBaseQuery, createApi } from \"@reduxjs/toolkit/query/react\";\r\n+import { BASE_URL } from \"../constants\";\r\n+\r\n+const baseQuery = fetchBaseQuery({\r\n+  baseUrl: BASE_URL,\r\n+  prepareHeaders: (headers, { getState }) => {\r\n+    const token = getState()?.auth?.userInfo?.token;\r\n+    if (token) {\r\n+      headers.set(\"Authorization\", `Bearer ${token}`);\r\n+    }\r\n+    return headers;\r\n+  },\r\n+  fetchFn: async (url, options = {}) => {\r\n+    if (options.body instanceof FormData) {\r\n+      delete options.headers[\"Content-Type\"];\r\n+    }\r\n+    return fetch(url, options);\r\n+  },\r\n+});\r\n+\r\n+export const apiSlice = createApi({\r\n+  baseQuery,\r\n+  tagTypes: [\"Product\", \"Order\", \"User\", \"Category\"],\r\n+  endpoints: () => ({}),\r\n+});\r\n"
+                }
+            ],
+            "date": 1750657864904,
+            "name": "Commit-0",
+            "content": "import { fetchBaseQuery, createApi } from \"@reduxjs/toolkit/query/react\";\r\nimport { BASE_URL } from \"../constants\";\r\n\r\nconst baseQuery = fetchBaseQuery({\r\n  baseUrl: BASE_URL,\r\n  prepareHeaders: (headers, { getState }) => {\r\n    const token = getState()?.auth?.userInfo?.token;\r\n    if (token) {\r\n      headers.set(\"Authorization\", `Bearer {token}`);\r\n    }\r\n    return headers;\r\n  },\r\n  fetchFn: async (url, options = {}) => {\r\n    if (options.body instanceof FormData) {\r\n      delete options.headers[\"Content-Type\"];\r\n    }\r\n    return fetch(url, options);\r\n  },\r\n});\r\n\r\nexport const apiSlice = createApi({\r\n  baseQuery,\r\n  tagTypes: [\"Product\", \"Order\", \"User\", \"Category\"],\r\n  endpoints: () => ({}),\r\n});\r\n"
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "sourceFile": "frontend/src/redux/constants.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1750346476771,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1750346505905,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,4 +4,5 @@\n export const PRODUCT_URL = \"/api/products\";\r\n export const UPLOAD_URL = \"/api/upload\";\r\n export const ORDERS_URL = \"/api/orders\";\r\n // export const PAYPAL_URL = \"/api/config/paypal\";\r\n+export const PAYMENT_URL = \"/api/payment\"; \n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1750346476771,
+            "name": "Commit-0",
+            "content": "export const BASE_URL = \"\"; // or use import.meta.env.VITE_BASE_URL\r\nexport const USERS_URL = \"/api/users\";\r\nexport const CATEGORY_URL = \"/api/category\";\r\nexport const PRODUCT_URL = \"/api/products\";\r\nexport const UPLOAD_URL = \"/api/upload\";\r\nexport const ORDERS_URL = \"/api/orders\";\r\n// export const PAYPAL_URL = \"/api/config/paypal\";\r\n"
+        }
+    ]
+}

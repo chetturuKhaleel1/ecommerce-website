@@ -1,0 +1,18 @@
+{
+    "sourceFile": "backend/models/catergoryModel.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1750334586080,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1750334586080,
+            "name": "Commit-0",
+            "content": "//cvareting how how ctaeroyies should look like\r\nimport mongoose from \"mongoose\";\r\n//create creating\r\nconst categorySchema = new mongoose.Schema({\r\n  name: {\r\n    type: String,\r\n    trim: true,\r\n    required: true,\r\n    maxLength: 32,\r\n    unique: true,\r\n  },\r\n});\r\n\r\nexport default mongoose.model(\"Category\", categorySchema);\r\n\r\n"
+        }
+    ]
+}
