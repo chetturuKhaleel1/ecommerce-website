@@ -1,0 +1,66 @@
+{
+    "sourceFile": "README.md",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 12,
+            "patches": [
+                {
+                    "date": 1753284285932,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1753284556975,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,4 +31,8 @@\n 1. Clone the repo:\r\n    ```bash\r\n    git clone https://github.com/chetturuKhaleel1/ecommerce-website.git\r\n    cd ecommerce-website\r\n+\r\n+\r\n+\r\n+   \r\n"
+                },
+                {
+                    "date": 1753284565672,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,7 +32,13 @@\n    ```bash\r\n    git clone https://github.com/chetturuKhaleel1/ecommerce-website.git\r\n    cd ecommerce-website\r\n \r\n+2. Install frontend dependencies:\r\n+   ```bash\r\n+   cd client\r\n+   npm install\r\n \r\n \r\n-   \r\n+cd ../server\r\n+npm install\r\n+\r\n"
+                },
+                {
+                    "date": 1753284592715,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,7 +38,7 @@\n    cd client\r\n    npm install\r\n \r\n \r\n-cd ../server\r\n+3.cd ../server\r\n npm install\r\n \r\n"
+                },
+                {
+                    "date": 1753284603167,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,7 +38,9 @@\n    cd client\r\n    npm install\r\n \r\n \r\n-3.cd ../server\r\n+3.Install backend dependencies:\r\n+\r\n+cd ../server\r\n npm install\r\n \r\n"
+                },
+                {
+                    "date": 1753284610675,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,4 +43,6 @@\n \r\n cd ../server\r\n npm install\r\n \r\n+4.Set up environment variables:\r\n+\r\n"
+                },
+                {
+                    "date": 1753284619279,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,5 +44,12 @@\n cd ../server\r\n npm install\r\n \r\n 4.Set up environment variables:\r\n+MONGO_URI=your_mongodb_connection\r\n+JWT_SECRET=your_jwt_secret\r\n+RAZORPAY_KEY=your_razorpay_key\r\n+RAZORPAY_SECRET=your_razorpay_secret\r\n \r\n+\r\n+5.\r\n+\r\n"
+                },
+                {
+                    "date": 1753284624385,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,6 +50,6 @@\n RAZORPAY_KEY=your_razorpay_key\r\n RAZORPAY_SECRET=your_razorpay_secret\r\n \r\n \r\n-5.\r\n+5.Run the application:\r\n \r\n"
+                },
+                {
+                    "date": 1753284635345,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,5 +51,17 @@\n RAZORPAY_SECRET=your_razorpay_secret\r\n \r\n \r\n 5.Run the application:\r\n+In one terminal, run backend:\r\n \r\n+bash\r\n+Copy code\r\n+cd server\r\n+nodemon index.js\r\n+In another terminal, run frontend:\r\n+\r\n+bash\r\n+Copy code\r\n+cd client\r\n+npm run dev\r\n+\r\n"
+                },
+                {
+                    "date": 1753284645397,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,9 +59,9 @@\n cd server\r\n nodemon index.js\r\n In another terminal, run frontend:\r\n \r\n-bash\r\n+\r\n Copy code\r\n cd client\r\n npm run dev\r\n \r\n"
+                },
+                {
+                    "date": 1753284664834,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,10 +53,9 @@\n \r\n 5.Run the application:\r\n In one terminal, run backend:\r\n \r\n-bash\r\n-Copy code\r\n+\r\n cd server\r\n nodemon index.js\r\n In another terminal, run frontend:\r\n \r\n"
+                },
+                {
+                    "date": 1753284682147,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,4 +63,6 @@\n Copy code\r\n cd client\r\n npm run dev\r\n \r\n+\r\n+\r\n"
+                },
+                {
+                    "date": 1753284690363,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,6 +63,7 @@\n Copy code\r\n cd client\r\n npm run dev\r\n \r\n+6.Open in browser:\r\n+http://localhost:5173\r\n \r\n-\r\n"
+                }
+            ],
+            "date": 1753284285932,
+            "name": "Commit-0",
+            "content": "# 🛒 E-commerce Website\r\n\r\nA full-stack e-commerce web application built with modern web technologies.\r\n\r\n## 🚀 Features\r\n\r\n- 🛍️ Product Listings\r\n- 🔍 Product Search & Filtering\r\n- 🧺 Add to Cart\r\n- 💳 Online Payment Integration\r\n- 🔐 User Authentication & Authorization\r\n- 📦 Order Management\r\n- 🛠️ Admin Dashboard\r\n\r\n## 🧰 Tech Stack\r\n\r\n**Frontend:**\r\n- React.js\r\n- Tailwind CSS\r\n\r\n**Backend:**\r\n- Node.js\r\n- Express.js\r\n- MongoDB\r\n\r\n**Payment Gateway:**\r\n- Razorpay\r\n\r\n## 📦 Installation\r\n\r\n1. Clone the repo:\r\n   ```bash\r\n   git clone https://github.com/chetturuKhaleel1/ecommerce-website.git\r\n   cd ecommerce-website\r\n"
+        }
+    ]
+}

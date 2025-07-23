@@ -8,6 +8,9 @@ dist/
 # OS/system files
 .DS_Store
 
+# secret
+.env
+
 # Logs
 *.log
 npm-debug.log*
