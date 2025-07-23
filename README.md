@@ -67,3 +67,8 @@ npm run dev
 6.Open in browser:
 http://localhost:5173
 
+## 📸 Project Preview
+
+Here’s a quick look at the UI of the application:
+
+![Screenshot](screenshot.png)
